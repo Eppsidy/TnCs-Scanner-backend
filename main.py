@@ -30,7 +30,7 @@ app.add_middleware(
 )
 
 # -----------------------------
-# Configuration
+# Configurations
 # -----------------------------
 SUMMARIZER_MODEL = os.getenv("SUMMARIZER_MODEL", "facebook/bart-large-cnn")
 CHUNK_TOKEN_LIMIT = int(os.getenv("CHUNK_TOKEN_LIMIT", "700"))  # approx words per chunk
