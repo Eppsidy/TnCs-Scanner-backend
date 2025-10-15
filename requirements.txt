@@ -6,6 +6,6 @@ python-docx
 requests
 beautifulsoup4
 nltk
-uvicorn
+uvicorn[standard]
 fastapi
 pydantic==2.5.0
