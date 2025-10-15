@@ -36,7 +36,7 @@ app.add_middleware(
 # -----------------------------
 # Configurations
 # -----------------------------
-SUMMARIZER_MODEL = "sshleifer/distilbart-cnn-12-6"
+SUMMARIZER_MODEL = os.getenv("SUMMARIZER_MODEL", "sshleifer/distilbart-cnn-12-6")
 CHUNK_TOKEN_LIMIT = int(os.getenv("CHUNK_TOKEN_LIMIT", "700"))  # approx words per chunk
 PORT = int(os.getenv("PORT", 8000))  # Azure sets this automatically
 
