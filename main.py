@@ -27,7 +27,7 @@ app = FastAPI(title="T&C Summarizer - Upgraded Backend")
 # Make this narrow in production
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=["https://tncs-scanner.vercel.app/"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
