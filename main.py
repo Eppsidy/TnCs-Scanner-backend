@@ -24,10 +24,16 @@ except Exception as e:
 
 app = FastAPI(title="T&C Summarizer - Upgraded Backend")
 
-# Make this narrow in production
+# CORS configuration for production
+ALLOWED_ORIGINS = [
+    "http://localhost:3000",  # Local development
+    "http://localhost:5173",  # Vite local development
+    "https://tncs-scanner.vercel.app",  # Production frontend (no trailing slash!)
+]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://tncs-scanner.vercel.app/"],
+    allow_origins=ALLOWED_ORIGINS,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
